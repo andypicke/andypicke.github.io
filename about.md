@@ -1,18 +1,21 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
+I decided to start writing a blog about my adventures in data science for a few reasons:
+- I enjoy writing about what i'm working on
+- Writing makes me understand the subject more. I often think I know a concept well, but writing about it makes me realize what I don't understand and forces me to learn it better.
+- I'll probably forget what I did; this way i'll be able to look back easily.
+- I'd like to become more involved with the data science community.
 
-### Background
-
-## Short
+## Short Bio
 - B.S in physics, PhD in physical oceanography
 - Postdoctoral researcher
 - Transitioning to a data science career 
 
-## Long
+## Long Bio
 
 I have a B.S in physics and completed my PhD in physical oceanography at the University of Washington School of Oceanography and Applied Physics Laboratory in December 2014. My research focused on internal tides, near-inertial waves, and turbulent mixing. I used a combination of field observations from multiple platforms and computer models to study these processes. 
 
