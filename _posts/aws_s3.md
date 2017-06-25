@@ -2,7 +2,7 @@
 
 # Amazon S3 and Python
 
-
+[Amazon S3](https://aws.amazon.com/s3/) is a cloud storage service offered by Amazon Web Services ([AWS]https://aws.amazon.com/).
 
 - Set up AWS account and config file (CLI?)
 
