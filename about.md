@@ -4,11 +4,12 @@ title: About Me
 permalink: /about/
 ---
 
-I decided to start writing a blog about my adventures in data science for a few reasons:
+I decided to start writing a blog about my adventures in data science for a few reasons, including:
 - I enjoy writing about what i'm working on
 - Writing makes me understand the subject more. I often think I know a concept well, but writing about it makes me realize what I don't understand and forces me to learn it better.
 - I'll probably forget what I did; this way i'll be able to look back easily.
 - I'd like to become more involved with the data science community.
+- I often find solutions or ideas from other peoples' blogs. Hopefully my posts will help someone in the same way.
 
 ## Short Bio
 - B.S in physics, PhD in physical oceanography
