@@ -28,7 +28,8 @@ for bucket in s3.buckets.all():
 ```
 
 ## Downloading files from your buckets
-
+- All objects in buckets are referenced by their 'key'. 
+- In this example, the object with key 'file_key.pdf' is downloaded and saved as 'file_downloaded.pdf'
 ```python
 key='file_key.pdf'
 dest_file='file_downloaded.pdf'
@@ -36,7 +37,7 @@ s3.Bucket('my_bucket').download_file(key,dest_file)
 ```
 
 ## Uploading files to your bucket
-
+- In this example, the filename is used as the key.
 ```python
 fname='name_of_file'
 data = open(fname, 'rb')
@@ -57,6 +58,9 @@ s3.create_bucket(Bucket='mybucket')
 ```
 
 ## Getting files from a public bucket
+
+- You can set permissions for who can see and access your buckets
+- A public bucket can be accessed by simply using the bucket name:
 
 ```python
 for key in s3.Bucket('bucket_name').objects.all():
