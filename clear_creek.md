@@ -20,5 +20,16 @@ figure, add line when creek was closed?
 
 
 
+## Up Next
+
+In part 2 of this post, i’m going to look at other stream gauges on Clear Creek between Golden and the continental divide, and try to answer the following questions:
+
+- What time of day does peak snowmelt occur?
+- How long does it take for changes at the divide to propagate downstream?
+- How much does streamflow vary along Clear Creek at a given time?
+
+Stay tuned!
+
+
 
 
