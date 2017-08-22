@@ -43,3 +43,5 @@ plt.rcParams['axes.labelsize'] = 'large'
 plt.rcParams['xtick.labelsize'] = 'large'
 plt.rcParams['ytick.labelsize'] = 'large'
 ```
+
+There are other ways of editing your jupyter notebook config files to include lines at startup, but I like this method. It's simple (easier than figuring out how to edit your jupyter configs), and you could even have different setups for types of analyses you are doing.
