@@ -16,6 +16,7 @@ I started by getting data for the stream gauge in Golden, on the north side of t
 
 ## 2017
 
+![Image description](/images/clearcreek/allyears_golden.png)
 figure, add line when creek was closed?
 
 
