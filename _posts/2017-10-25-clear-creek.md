@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clear Creek Rising: Analyzing USGS Stream Gauge Data
+title: 'Clear Creek Rising: Analyzing USGS Stream Gauge Data'
 ---
 
 
