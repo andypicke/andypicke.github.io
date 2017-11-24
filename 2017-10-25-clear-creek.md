@@ -36,7 +36,7 @@ js = resp.json()
 
 ## 2017
 
-First I looked at the 2017 data around the peak runoff, which appears to be occur around June 11.
+First I looked at the 2017 data around the peak runoff, which appears to be occur around June 11. Another interesting feature is that there appears to be some kind of diurnal cycle, probalby related to the daily cycle of temperature/melting at it's source(s).
 
 ![Image description](/images/clearcreek/2017_peak_golden.png)
 
@@ -47,6 +47,11 @@ Next I looked at the data for all years, back to 2008. The magnitude of the peak
 
 ![Image description](/images/clearcreek/allyears_golden.png)
 
+I also wondered if there was any sort of trend with peak runoff occurring earlier in the year, due to climate change. There doesn't seem to be a clear pattern I can discern from this data. I think there is a lot of natural variability in the timing, and a longer time-series would be needed to identify a trend.
+
+![Image description](/images/clearcreek/allyears_peak_golden.png)
+
+
 ## 2013 Floods
 
 In 2013, you might notice there is also a 2nd peak later in the year, which is even larger than the spring runoff. This corresponds to a major flooding event in 2013. I wasn't yet living in Colorado in 2013, but if you were you probably remember it (especially if you were living near Boulder or along the front range). The plot below shows how quickly the water rose!
@@ -55,10 +60,9 @@ In 2013, you might notice there is also a 2nd peak later in the year, which is e
 
 ## Up Next
 
-In part 2 of this post, i’m going to look at other stream gauges on Clear Creek between Golden and the continental divide, and try to answer the following questions:
+In the future, I plan to investigate this data further and look at other stream gauges on Clear Creek between Golden and the continental divide. Some of the questions i'ld like to examine include:
 
-- What time of day does peak snowmelt occur?
-- How long does it take for changes at the divide to propagate downstream?
-- How much does streamflow vary along Clear Creek at a given time?
+- What time of day does peak snowmelt occur? Does this correlate with temperature at higher elevations?
+- How long does it take for changes at the divide to propagate downstream (look at different stream gauges along clear creek)?
 
 Stay tuned!
