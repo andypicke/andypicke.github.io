@@ -17,7 +17,7 @@ But if you come in June, you’ll probably find more of a raging river. As the t
 
 
 
-Normally I judge the level of the creek by how far underwater the [fish](https://2.bp.blogspot.com/-fS3L_sopcx0/TnLHnasuXMI/AAAAAAAADR8/KgFXPlom5Qg/s1600/IMGP4041.JPG) are by the Washington Ave. Bridge, but as a scientist I figured I should use something a little more accurate :).
+Normally I judge the level of the creek by how far underwater the fish are by the Washington Ave. Bridge, but as a scientist I figured I should use something a little more accurate :).
 
 ![Image description](/images/clearcreek/fish.png)
 
