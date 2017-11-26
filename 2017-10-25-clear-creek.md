@@ -8,6 +8,7 @@ One of my favorite things about Golden is Clear Creek. It runs right through dow
 
 
 ![Summer fun on Clear Creek. Image from http://www.goldenvisitorsbureau.com/gvcactivities.php](/images/clearcreek/gvcactivities.png)
+*Summer fun on Clear Creek. Image from http://www.goldenvisitorsbureau.com/gvcactivities.php*
 
 But if you come in June, you’ll probably find more of a raging river. As the temperatures climb up into summer, all that snow in the mountains starts melting and flowing down Clear Creek into Golden. I especially love to walk by the creek during this time and watch it rise and speed up. The police usually [close the creek](http://www.denverpost.com/2017/06/12/jefferson-county-restricts-tubing-clear-creek/) to tubing or swimming during this time because it is too dangerous . The only people on the water during this period are the experience white water kayakers, and fire departments from around the area practicing [swift-water rescues](http://www.denverpost.com/2017/06/03/water-rescue-training-clear-creek/).
 
