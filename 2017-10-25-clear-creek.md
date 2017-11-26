@@ -62,6 +62,8 @@ I also wondered if there was any sort of trend with peak runoff occurring earlie
 In 2013, you might notice there is also a 2nd peak later in the year, which is even larger than the spring runoff. This corresponds to a major flooding event in 2013. I wasn't yet living in Colorado in 2013, but if you were you probably remember it (especially if you were living near Boulder or along the front range). The plot below shows how quickly the water rose!
 ![IDischarge measured at Golden USGS stream gauge on Clear Creek during the 2013 floods. ](/images/clearcreek/2013Flood_golden.png)
 
+![IDischarge measured at Golden USGS stream gauge on Clear Creek during the 2013 floods. ](/images/clearcreek/2013Flood_golden_zoom.png)
+
 
 ## Up Next
 
