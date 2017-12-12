@@ -186,3 +186,4 @@ gridExtra::grid.arrange(p1,p2)
 ![](/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
 
 
+Try it out with your energy data and let me know what you find!
