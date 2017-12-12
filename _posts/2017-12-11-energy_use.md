@@ -3,8 +3,6 @@ layout: post
 title: 'Winter Is Coming (with higher energy bills)'
 ---
 
-      
-# Introduction
 
 Winter is coming, but for us that means higher energy bills, not [whitewalkers](http://gameofthrones.wikia.com/wiki/White_Walkers) :) . We've had a few unseasonably warm days and not much snow yet, but it's definitely colder and we are now using our heat almost every night. I thought it would be fun to explore our energy usage data in R. 
 
