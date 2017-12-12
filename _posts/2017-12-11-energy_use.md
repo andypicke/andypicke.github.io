@@ -180,9 +180,11 @@ gridExtra::grid.arrange(p1,p2)
 ![](/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
 
 
-* The electricity usage looks fairly constant, except for a spike in January 2017. We have gas heat, so why the spike? Well when we bought the house, there was no heat vent in the back room and we used an electric heater there; hence the spike. We had a vent installed in February, 
+* From the timeseries plot above, the electricity usage looks fairly constant, except for a spike in January 2017. We have gas heat, so why the spike? Well when we bought the house, there was no heat vent in the back room and we used an electric heater there; hence the spike. We had a vent installed in February and didn't need to use the electric heater anymore. The first value is also lower than the rest; probably because we were moving in during this period and our first bill didn't cover a full month.
 
-*We also just got an electric car that we charge at home every few nights, so it will be interesting to see how that changes our electricity usage.
+* The scatter plots above show there isn't really much of a relationship between electricity use and temperature. The 3 higher points above 70 degrees might be due to our window AC unit, but other than that there isn't much seasonality to our electricity use.
+
+* We also just got an electric car that we charge at home every few nights, so it will be interesting to see how that changes our electricity usage.
 
 
 Try it out with your energy data and let me know what you find!
