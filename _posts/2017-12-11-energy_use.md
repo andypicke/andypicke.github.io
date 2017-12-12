@@ -94,7 +94,7 @@ p3 <-ele %>% ggplot(aes(Date,kWh))+
 gridExtra::grid.arrange(p1,p2,p3)
 ```
 
-![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-5-1.png)<!-- -->
+![](/images/energy_use/unnamed-chunk-5-1.png)<!-- -->
 
 
 ## Gas use vs temperature
@@ -122,7 +122,7 @@ p2 <- gas %>% filter(avgTemp<70) %>%
 gridExtra::grid.arrange(p1,p2)
 ```
 
-![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-6-1.png)<!-- -->
+![](/images/energy_use/unnamed-chunk-6-1.png)<!-- -->
 
 ## Fit a linear regression of Gas Usage vs. Avg. Temperature
 
@@ -183,6 +183,6 @@ p2 <- ele %>% filter(kWh<450) %>%
 gridExtra::grid.arrange(p1,p2)
 ```
 
-![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
+![](/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
 
 
