@@ -152,12 +152,8 @@ broom::tidy(model2)
 ## 2     avgTemp  -2.705768 0.1665392 -16.24703 1.619307e-08
 ```
 
-* The model slope is -2.34, which means that for every degree colder it is, we use -2.34 more therms of natural gas. 
+* The model slope is -2.71, which means that for every degree colder it is (below 70 degress), we use 2.71 more therms of natural gas. 
 * We are planning to add insulation to our attic, so it will be interesting to see if the slope changes after that (hopefully it does!)
-
-* The electricity usage looks fairly constant, except for a spike in January 2017. We have gas heat, so why the spike? Well when we bought the house, there was no heat vent in the back room and we used an electric heater there; hence the spike. We had a vent installed in February, 
-
-*We also just got an electric car that we charge at home every few nights, so it will be interesting to see how that changes our electricity usage.
 
 
 
@@ -182,6 +178,11 @@ gridExtra::grid.arrange(p1,p2)
 ```
 
 ![](/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
+
+
+* The electricity usage looks fairly constant, except for a spike in January 2017. We have gas heat, so why the spike? Well when we bought the house, there was no heat vent in the back room and we used an electric heater there; hence the spike. We had a vent installed in February, 
+
+*We also just got an electric car that we charge at home every few nights, so it will be interesting to see how that changes our electricity usage.
 
 
 Try it out with your energy data and let me know what you find!
