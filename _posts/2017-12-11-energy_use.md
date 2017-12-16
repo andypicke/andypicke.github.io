@@ -4,9 +4,6 @@ title: 'Winter Is Coming (with higher energy bills)'
 ---
 
 
-
-# Introduction
-
 Winter is coming, but for us that means higher energy bills, not [whitewalkers](http://gameofthrones.wikia.com/wiki/White_Walkers) :) . We've had a few unseasonably warm days and not much snow yet, but it's definitely colder and we are now using our heat almost every night. I thought it would be fun to explore our energy usage data in R.
 
 
@@ -106,7 +103,7 @@ p3 <-ele %>% ggplot(aes(Date,kWh))+
 gridExtra::grid.arrange(p1,p2,p3)
 ```
 
-![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-5-1.png)<!-- -->
+![](/images/energy_use/unnamed-chunk-5-1.png)<!-- -->
 
 
 ### Energy use vs temperature
@@ -136,7 +133,7 @@ p2 <-  gas2 %>%
 gridExtra::grid.arrange(p1,p2)
 ```
 
-![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-6-1.png)<!-- -->
+![](/images/energy_use/unnamed-chunk-6-1.png)<!-- -->
 
 ### Linear regression vs Temperature
 
@@ -201,7 +198,7 @@ p2 <- ele %>% filter(kWh<450 & kWh>200) %>%
 gridExtra::grid.arrange(p1,p2)
 ```
 
-![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
+![](/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
 
 ### Linear Regression vs. temperature
 A linear regression of electricty use vs temperature shows no significant relationship (the slope pvalue is 0.5).
