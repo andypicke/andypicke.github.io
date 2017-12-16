@@ -36,18 +36,20 @@ gas <- read.csv('data/xcel_gas.csv',stringsAsFactors = FALSE)
 gas <-gas %>% rename(Date=Last.Read.Date,therms=Gas.Usage..Therms.,avgTemp=Average.Temperature) %>%
   select(Date,therms,avgTemp) %>%
   mutate(Date=mdy(Date)) %>%
+  filter(!is.na(Date)) %>%
+  mutate(Yr=as.factor(lubridate::year(Date))) %>%
   mutate(avgTemp=as.integer(gsub("[^0-9]", "", avgTemp) ))
 head(gas)
 ```
 
 ```
-##         Date therms avgTemp
-## 1 2017-11-16     58      47
-## 2 2017-10-18     37      54
-## 3 2017-09-18      7      72
-## 4 2017-08-17      5      71
-## 5 2017-07-19      6      73
-## 6 2017-06-19     17      63
+##         Date therms avgTemp   Yr
+## 1 2017-11-16     58      47 2017
+## 2 2017-10-18     37      54 2017
+## 3 2017-09-18      7      72 2017
+## 4 2017-08-17      5      71 2017
+## 5 2017-07-19      6      73 2017
+## 6 2017-06-19     17      63 2017
 ```
 
 
@@ -60,19 +62,21 @@ ele <- read.csv('data/xcel_elec.csv',stringsAsFactors = FALSE)
 ele <- ele %>% rename(Date=Last.Read.Date,kWh=Electric.Usage..kWh.,avgTemp=Average.Temperature) %>%
   select(Date,kWh,avgTemp) %>%
   mutate(Date=mdy(Date)) %>%
+  filter(!is.na(Date)) %>%
+  mutate(Yr=as.factor(lubridate::year(Date))) %>%
   mutate(avgTemp=as.integer(gsub("[^0-9]", "", avgTemp) ))
 
 head(ele)
 ```
 
 ```
-##         Date kWh avgTemp
-## 1 2017-11-16 340      47
-## 2 2017-10-18 324      54
-## 3 2017-09-18 376      72
-## 4 2017-08-17 323      71
-## 5 2017-07-19 331      73
-## 6 2017-06-19 304      63
+##         Date kWh avgTemp   Yr
+## 1 2017-11-16 340      47 2017
+## 2 2017-10-18 324      54 2017
+## 3 2017-09-18 376      72 2017
+## 4 2017-08-17 323      71 2017
+## 5 2017-07-19 331      73 2017
+## 6 2017-06-19 304      63 2017
 ```
 
 
@@ -102,7 +106,7 @@ p3 <-ele %>% ggplot(aes(Date,kWh))+
 gridExtra::grid.arrange(p1,p2,p3)
 ```
 
-![](/images/energy_use/unnamed-chunk-5-1.png)<!-- -->
+![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-5-1.png)<!-- -->
 
 
 ### Energy use vs temperature
@@ -115,14 +119,15 @@ gridExtra::grid.arrange(p1,p2,p3)
 
 ```r
 p1 <- gas %>% ggplot(aes(avgTemp,therms))+
-  geom_point(size=5)+
+  geom_point(size=5,aes(col=Yr))+
   geom_smooth(method='lm')+
   ggtitle("Gas Usage vs Temperature ; All Data")+
    xlab("Monthly Avg. Temperature")
 
-p2 <- gas %>% filter(avgTemp<70) %>%
+gas2 <- gas %>% filter(avgTemp<70)
+p2 <-  gas2 %>%
   ggplot(aes(avgTemp,therms))+
-  geom_point(size=5)+
+  geom_point(size=5,aes(col=Yr))+
   geom_smooth(method='lm')+
   ggtitle("Gas Usage vs Temperature ; Only Temp <70")+
    xlab("Monthly Avg. Temperature")
@@ -131,7 +136,7 @@ p2 <- gas %>% filter(avgTemp<70) %>%
 gridExtra::grid.arrange(p1,p2)
 ```
 
-![](/images/energy_use/unnamed-chunk-6-1.png)<!-- -->
+![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-6-1.png)<!-- -->
 
 ### Linear regression vs Temperature
 
@@ -180,7 +185,7 @@ broom::tidy(model2)
 
 ```r
 p1 <- ele %>% ggplot(aes(avgTemp,kWh))+
-  geom_point(size=5)+
+  geom_point(size=5, aes(col=Yr) )+
   geom_smooth(method = 'lm')+
   ggtitle("kWh vs. Temperature : All Data")+
    xlab("Monthly Avg. Temperature")
@@ -188,7 +193,7 @@ p1 <- ele %>% ggplot(aes(avgTemp,kWh))+
 
 p2 <- ele %>% filter(kWh<450 & kWh>200) %>%
   ggplot(aes(avgTemp,kWh))+
-  geom_point(size=5)+
+  geom_point(size=5, aes(col=Yr) )+
   geom_smooth(method = 'lm') +
   ggtitle("kWh vs. Temperature : Sept 2016 and January 2017 Removed")+
  xlab("Monthly Avg. Temperature")
@@ -196,7 +201,7 @@ p2 <- ele %>% filter(kWh<450 & kWh>200) %>%
 gridExtra::grid.arrange(p1,p2)
 ```
 
-![](/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
+![](/Users/Andy/andypicke.github.io/images/energy_use/unnamed-chunk-9-1.png)<!-- -->
 
 ### Linear Regression vs. temperature
 A linear regression of electricty use vs temperature shows no significant relationship (the slope pvalue is 0.5).
