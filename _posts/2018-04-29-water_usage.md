@@ -85,25 +85,13 @@ They just upgraded to recording meters, so the data only goes back to the beginn
 dat %>% ggplot(aes(as.Date(Read_Time),gallons))+
   geom_point()+
   xlab("Date")+
-  ylab("Gallons")
+  ylab("Gallons")+
+  ggtitle("Water Usage Timeseries")
 ```
 
 ![](/images/water_use/unnamed-chunk-1-1.png)
 
-```r
-  ggtitle("Water Usage Timeseries")
-```
 
-```
-## $title
-## [1] "Water Usage Timeseries"
-##
-## $subtitle
-## NULL
-##
-## attr(,"class")
-## [1] "labels"
-```
 
 ## Distribution of flow values
 
