@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Tracking My Water Usage'
+title: 'Tracking Our Water Usage'
 ---
 
 # Introduction
@@ -21,9 +21,9 @@ str(dat)
 
 ```
 ## 'data.frame':	1994 obs. of  12 variables:
-##  $ Account_ID : Factor w/ 2 levels "03318530-01",..: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ Meter_ID   : int  176358 176358 176358 176358 176358 176358 176358 176358 176358 176358 ...
-##  $ Meter_SN   : int  29313580 29313580 29313580 29313580 29313580 29313580 29313580 29313580 29313580 29313580 ...
+##  $ Account_ID : Factor
+##  $ Meter_ID   : int  
+##  $ Meter_SN   : int  
 ##  $ Read_Time  : Factor w/ 1994 levels "2018-02-03 00:59",..: 1 2 3 4 5 6 7 8 9 10 ...
 ##  $ Timezone   : Factor w/ 1 level "US/Mountain": 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ Read       : num  44.3 44.3 44.3 44.3 44.3 ...
