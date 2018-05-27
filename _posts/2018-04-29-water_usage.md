@@ -138,7 +138,7 @@ dat %>%  ggplot(aes(x=as.factor(isweekend),y=gallons))+
 
 ## Now i'll break it down by hour of day
 
-We tend to use more water between 6 and 8 am, and from 4 to 10 pm, which probably is driven mainly by our workday schedule. Next i'll separate this into weekdays and weekends to see if this holds up; if it is due to the workday, we shouldn't see the same pattern on the weekends
+We tend to use more water between 6 and 8 am, and from 4 to 10 pm, which probably is driven mainly by our workday schedule. The morning usage is probably due mostly to showering. Note that I usually leave for work by 7:30, so the larger 8:00 values are likely my wife taking a shower (you can see she takes longer showers than me :) ). Next i'll separate this into weekdays and weekends to see if this holds up; if it is due to the workday, we shouldn't see the same pattern on the weekends
 
 
 ```r
