@@ -8,6 +8,10 @@ tags: r
 As you may know from [previous posts](https://andypicke.github.io/clear-creek/), i've been interested in looking at stream flow along Clear Creek in Golden, CO during
 the spring snowmelt season. I made a Shiny app called [*GoldenStreamGauge'](https://andypicke.shinyapps.io/GoldenStreamGauge/) that allows you to easily visualize streamflow, as well as several variables from a [snotel](https://www.wcc.nrcs.usda.gov/snow/) station at Loveland Basin, the headwaters of Clear Creek.
 
+
+
+![](/images/GoldenStreamGauge/Screen Shot 2018-06-17 at 8.19.15 AM.png)<!-- -->
+
 # Using the app
 
 Using the app is very simple: You select a date range, and it plots timeseries of streamflow, temperature, snow-water equivalent, and precipiation for that period. The default time period is from 2018-01-01 to the current date.
