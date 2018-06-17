@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'GoldenStreamGauge: A Shiny app for visualizing stream flow and weather conditions on Clear Creek in CO'
+title: 'GoldenStreamGauge: A Shiny app for visualizing stream flow and weather conditions on Clear Creek in Golden CO'
 tags: r
 ---
 
@@ -32,3 +32,5 @@ I am considering several future improvements to the app, including:
 * Adding additional stream gauges along clear creek.
 * Adding additional snotel stations.
 * Adding maps showing the location of data sources.
+
+You can view the source code for the app, as well as submit bugs or requests, [here](https://github.com/andypicke/GoldenStreamGauge).
