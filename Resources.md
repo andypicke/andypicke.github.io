@@ -10,3 +10,5 @@ During my journey into data science, i've searched for and tried many different 
 - <https://chrisalbon.com/> - Chris is a data scientist who has documented solutions to many common data science problems he's encountered (and you will probably encoutner) on his site, nicely organized by topic. Thanks Chris!
 
 - Udemy - Some good data science courses on here. Most courses list the full price at $100-200, but they are always on sale (I don't think i've paid more than $15 for a course). I guess their sales strategy is to make you feel like you are getting a great deal?
+
+[Data is Plural](https://tinyletter.com/data-is-plural) : A weekly newsletter highlighting some really interesting datasets.
