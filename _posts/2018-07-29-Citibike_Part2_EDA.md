@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Citibke Part2: EDA'
+title: 'Citibke Part 2 : EDA'
 tags: python
 ---
 This is the second in a series of blog posts i'll be writing on a project to analyze NYC citibike data. The [first post]() focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In this part, i'll

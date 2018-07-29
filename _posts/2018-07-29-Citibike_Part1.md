@@ -1,3 +1,8 @@
+---
+layout: post
+title: 'Citibke Part 1 : Data collection and Preparation'
+tags: python
+---
 
 This is the first in a series of blog posts i'll be writing on a project to analyze NYC citibike data. In this part, i'll discuss getting and storing the data, and my workflow for analyzing a very large dataset. I've written about some of the pieces of this workflow previously, and will include links to those posts.
 
