@@ -8,24 +8,26 @@ be doing some EDA (exploratory data analysis) of the data to identify patterns a
 
 # Results
 
-## Number of rides per year
 First I wanted to examine the number of rides taken and it's evolution over time. I'll look at the number of rides taken each year, month, and day:
 
+## Number of rides per year
+The number of rides has increased each year.
 ![](/images/Citibike/rides_per_year.png)
 
 ## Number of rides per month
+The number of rides per month shows a similar seasonal cycle in each year; the peak occurs in September and the minimum occurs near February. This is likely related to the seasonal weather pattern; we'll investigate this further later.
 
 ![](/images/Citibike/rides_per_month.png)
 
 ## Number of rides per day
-
+The number of rides per day shows a similar seasonal pattern, but you can see there is also a lot of higher frequency variability.
 ![](/images/Citibike/rides_per_day.png)<!-- -->
 
 ## Is the increase in rides over time due to more bikes/stations?
-Besides people taking more rides, the increase over time could be due to increased capacity of the system (more stations and bikes)
+Besides people taking more rides, the increase over time could be due to increased capacity of the system (more stations and bikes).
 
 ### Number of stations over time
-
+The number of stations has increased each year, which probably explains a large part of the increase in the number of rides each year.
 ![](/images/Citibike/stations_vs_time.png)
 
 ### Number of bikes over time
@@ -34,11 +36,11 @@ Besides people taking more rides, the increase over time could be due to increas
 
 
 ## Rides by day of week
-
+Wednesday has the largest number of rides, and the weekends tend to have fewer rides than weekdays.
 ![](/images/Citibike/rides_per_dayofweek.png)
 
 ## Rides by hour of day
-
+The number of rides per hour shows two peaks; one near 8am and another near 5pm. This suggests a lot of the rides are people commuting to/from work.
 ![](/images/Citibike/.png)
 
 ### Weekdays only
@@ -46,7 +48,7 @@ Besides people taking more rides, the increase over time could be due to increas
 ![](/images/Citibike/rides_per_hour_weekdays.png)
 
 ### Weekends only
-
+The hourly cycle of rides on weekends only looks very different, with a peak in the early afternoon.
 ![](/images/Citibike/rides_per_hour_weekend.png)
 
 ## Trip duration by day of week
@@ -60,15 +62,30 @@ Examining the stations with the most rides on weekends vs weekdays qualitatively
 
 ## Relationship between rides and weather
 
-### Temperature
+
+### Correlations
+
+* The number of rides has a strong positive correlation with temperature, and weaker negative correlations with wind gust and precipiation.
+
+![](/images/Citibike/rides_wea_corrplot.png)
+
+### Number of Rides vs Temperature
+![](/images/Citibike/Nrides_Vs_temp.png)
+
+### Number of Rides vs  Cloud cover
 ![](/images/Citibike/.png)
 
-### Cloud cover
-![](/images/Citibike/.png)
+### Number of Rides vs  Wind gust
+![](/images/Citibike/Nrides_Vs_wind.png)
 
-## Conlusions
+### Number of Rides vs Precipitation
+![](/images/Citibike/Nrides_Vs_precip.png)
+
+
+
+## Conclusions
 * The number of rides is increasing over time. This is at least partly due to increases in the number of stations and bikes.
 * The daily and hourly patterns indicate that rides during the week are mainly commuting, while those on the weekend are more for recreation.
 * There is a strong seasonal cycle in the number of rides taken. This is probably due to seasonal patterns in weather.
 * Weather is significantly correlated with the number of rides taken. More rides are taken when temperatures are warmer, and less are taken when there is rain.
-* A model predicting the daily number of rides taken should take these findings into account. Possible predictors include day of week, number of stations/bikes, temperature, and precipitation.
+* A model predicting the daily number of rides taken should take these findings into account. Possible predictors include day of week, number of stations/bikes, temperature, precipitation, and wind gust.
