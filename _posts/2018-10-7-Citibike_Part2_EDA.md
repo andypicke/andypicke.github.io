@@ -72,9 +72,6 @@ Examining the stations with the most rides on weekends vs weekdays qualitatively
 ### Number of Rides vs Temperature
 ![](/images/Citibike/Nrides_Vs_temp.png)
 
-### Number of Rides vs  Cloud cover
-![](/images/Citibike/.png)
-
 ### Number of Rides vs  Wind gust
 ![](/images/Citibike/Nrides_Vs_wind.png)
 
