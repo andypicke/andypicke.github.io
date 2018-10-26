@@ -6,7 +6,7 @@ tags: python
 
 This is the first in a series of blog posts i'll be writing on a project to analyze NYC [Citibike](https://www.citibikenyc.com/) data. In this part, i'll discuss getting and storing the data, and my workflow for analyzing a very large dataset. I've written about some of the pieces of this workflow previously, and will include links to those posts where appropriate.
 
-The data is available [here](https://s3.amazonaws.com/tripdata/index.html), and is stored in [AWS S3](https://aws.amazon.com/s3/). S3 is a cloud storage service offered by Amazon Web Services (AWS). You can click and download individual files; however since I wanted all the files I used the command line to download all the files at once:
+The Citibike data is available [here](https://s3.amazonaws.com/tripdata/index.html), and is stored in [AWS S3](https://aws.amazon.com/s3/). S3 is a cloud storage service offered by Amazon Web Services (AWS). You can click and download individual files; however since I wanted all the files I used the command line to download all the files at once:
 
 ```
 aws s3 cp s3://tripdata . --recursive --exclude "*JC"
@@ -40,6 +40,12 @@ df_year = pd.read_sql_query(query,con)
 ```
 
 Although SQL is much quicker, it still takes a bit of time on such a large dataset (a few minutes on my (old) laptop). My strategy was to use SQL to aggregate and summarize the large dataset, and then pull those smaller result sets into python for analysis and modeling. I wrote a [script](https://github.com/andypicke/NYC_citibike/blob/master/citibike_MakeDataFromSQL.ipynb) to do all of the operations I will want for the analysis, and save the results in csv files that can be quickly loaded instead of having to run the sql queries every time I update the analysis. Some of the operations I performed were counting the number of rides per day month, year, and day.
+
+# Other data
+
+In addition to the Citibike data, I also obtained data on weather and holidays to use as predictors in the model.
+- Weather data is for LaGuardia Airport, and was downloaded from http://www.wunderground.com/ with the script [get_weather_data.py](https://github.com/andypicke/NYC_citibike/blob/master/get_weather_data.py). I made a separate SQLite database for the weather data.
+- A list of holiday dates was downloaded from https://holidayapi.com/ with [get_holidays.ipynb](https://github.com/andypicke/NYC_citibike/blob/master/get_holidays.ipynb), and stored in a database table.
 
 
 In the next post, i'll do some exploratory data analysis (EDA) of the data to detect patterns and trends, and inform the modeling stage.
