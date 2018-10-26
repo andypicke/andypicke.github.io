@@ -6,7 +6,7 @@ tags: python
 
 # Introduction
 
-This is the thrid in a series of blog posts i'll be writing on a project to analyze NYC citibike data. The [first post]() focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In the second part, I
+This is the third in a series of blog posts i'll be writing on a project to analyze NYC citibike data. The [first post]() focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In the second part, I
 did some EDA (exploratory data analysis) of the data. In this final post, i'll focus on modeling with the aim of predicting the number of Citibike rides taken on a particular day.
 
 From the EDA, I identified several variables that are correlated with the number of rides and should probably be included in my model:
@@ -471,19 +471,6 @@ plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/linreg_vs_actual.pn
 ### Plot the timeseries of actual and predicted values from linear regression
 
 
-```python
-#
-plt.figure(figsize=(14,8))
-plt.plot(y,label='Actual')
-plt.plot(reg.predict(X_all),'d',label='Model')
-plt.legend();
-plt.xlabel('Yearday')
-plt.ylabel('Number Daily Rides')
-plt.title('Linear Regression')
-plt.grid();
-
-plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/linreg_vs_actual_timeseries.png')
-```
 
 
 ![](/images/Citibike/linreg_vs_actual_timeseries.png)
@@ -496,18 +483,14 @@ from sklearn.ensemble import RandomForestRegressor
 
 rf = RandomForestRegressor()
 rf.fit(X_train,y_train)
-rf.score(X_train, y_train)
 ```
 
 
 
 
 
-    0.9775367157884189
 
-
-
-
+Cross-validated score estimate on training set:
 ```python
 np.mean(cross_val_score(rf,X_train,y_train))
 ```
@@ -519,7 +502,7 @@ np.mean(cross_val_score(rf,X_train,y_train))
 
 
 
-
+Score on test set:
 ```python
 rf.score(X_test,y_test)
 ```
@@ -531,7 +514,7 @@ rf.score(X_test,y_test)
 
 
 
-
+RMSE:
 ```python
 RMSE_rf = mean_squared_error(y_test, rf.predict(X_test))**0.5
 RMSE_rf
@@ -598,15 +581,7 @@ RMSE_rf2
 
 
 
-```python
-plt.figure(figsize=(14,8))
-sns.regplot(rf2.predict(X_all), y)
-plt.grid()
-
-plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/rf_vs_actual.png')
-
-```
-
+## Scatterplot of predicted vs actual
 
 ![](/images/Citibike/rf_vs_actual.png)
 
@@ -733,22 +708,6 @@ rf_imp.sort_values('imp',ascending=False)
 - The plot below shows that the residuals are significantly reduced by the random forest model.
 - However there are still a small number of large residuals remaining.
 
-
-```python
-plt.figure(figsize=(14,8))
-#plt.plot(y,label='Actual')
-plt.plot(y-reg.predict(X_all),'k',label='LinReg')
-plt.plot(y-rf.predict(X_all),'rd',label='RF')
-plt.legend();
-plt.xlabel('Yearday')
-plt.ylabel('Residual # Daily Rides')
-plt.title('Model Residuals ');
-plt.hlines(xmin=0,xmax=360,y=0);
-plt.ylim(-25000,20000)
-
-plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/linreg_rf_residuals.png')
-
-```
 
 
 ![](/images/Citibike/linreg_rf_residuals.png)
