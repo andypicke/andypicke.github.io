@@ -560,9 +560,12 @@ rf2 = RandomForestRegressor()
 cv = GridSearchCV(rf2, params)
 cv.fit(X_train, y_train)
 rf2 = cv.best_estimator_
-np.mean( cross_val_score(rf2, X_train, y_train) )
 ```
 
+Cross-validated score estimate on training set:
+```python
+np.mean( cross_val_score(rf2, X_train, y_train) )
+```
 
 
 
@@ -570,7 +573,7 @@ np.mean( cross_val_score(rf2, X_train, y_train) )
 
 
 
-
+Score on test set:
 ```python
 rf2.score(X_test, y_test)
 ```
@@ -582,7 +585,7 @@ rf2.score(X_test, y_test)
 
 
 
-
+RMSE:
 ```python
 RMSE_rf2= mean_squared_error(y_test, rf2.predict(X_test))**0.5
 RMSE_rf2
@@ -593,12 +596,6 @@ RMSE_rf2
 
     4581.133953398355
 
-
-
-
-```python
-
-```
 
 
 ```python
@@ -616,6 +613,7 @@ plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/rf_vs_actual.png')
 
 ### Compare RMSE from the 3 models
 
+The optimized random forest regressor has the lowest RMSE.
 
 ```python
 # Compare RMSE
@@ -756,21 +754,14 @@ plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/linreg_rf_residuals
 ![](/images/Citibike/linreg_rf_residuals.png)
 
 
-### Look at dates of residuals to see if any are holidays etc:
+## What dates do largest residuals fall on?
+Sorting by residual, we can see that a lot of the largest negative residuals (model overpredicts actual value) occur near holidays (July 4th, Christmas, Thanksgiving). We did include holidays in the model, but the day or two before/after a holiday are also strongly affected. This makes sense; people often take off multiple days or a long weekend for big holidays. If really wanted to try to capture this behavior, we might create a 'near holiday' variable this is 1 on the day or two before/after a holiday.
 
 
 ```python
 X2 = df_comb.copy()
 # add residuals
 X2['resid'] = y - reg.predict(X_all)
-#X2.head()
-```
-
-## What dates do largest residuals fall on?
-Sorting by residual, we can see that a lot of the largest negative residuals (model overpredicts actual value) occur near holidays (July 4th, Christmas, Thanksgiving). We did include holidays in the model, but the day or two before/after a holiday are also strongly affected. This makes sense; people often take off multiple days or a long weekend for big holidays. If really wanted to try to capture this behavior, we might create a 'near holiday' variable this is 1 on the day or two before/after a holiday.
-
-
-```python
 X2[['resid','date']].sort_values('resid').head(10)
 ```
 
