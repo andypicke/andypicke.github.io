@@ -4,7 +4,7 @@ title: 'Citibke Part 3 : Modeling'
 tags: python
 ---
 
-This is the third in a series of blog posts i'll be writing on a project to analyze NYC Citibike data. The [first post](https://andypicke.github.io/Citibike_Part1/) focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In the second part, I
+This is the third and final in a series of blog posts i'll be writing on a project to analyze NYC Citibike data. The [first post](https://andypicke.github.io/Citibike_Part1/) focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In the second part, I
 did some EDA (exploratory data analysis) of the data. In this final post, i'll focus on modeling with the aim of predicting the number of Citibike rides taken on a particular day.
 
 From the EDA, I identified several variables that are correlated with the number of rides and should probably be included in my model:
@@ -16,10 +16,7 @@ From the EDA, I identified several variables that are correlated with the number
 * wind gust
 
 
-# Modeling citibike data
-## In this notebook, I create some models to predict the total number of daily Citibike rides based on a set of features identified during EDA.
-
-https://github.com/andypicke/NYC_citibike/blob/master/citibike_regression_new.ipynb
+You can also view the [jupyter notebook](https://github.com/andypicke/NYC_citibike/blob/master/citibike_regression_new.ipynb) behind this analysis.
 
 ### Import libraries and set some defaults for nice plots.
 
@@ -47,146 +44,6 @@ plt.rcParams['lines.linewidth'] = 3
 
 ```python
 df_comb = pd.read_csv('data/data_comb.csv')
-df_comb.head()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>yday</th>
-      <th>Nrides</th>
-      <th>date</th>
-      <th>Tmean</th>
-      <th>precip_In</th>
-      <th>max_gust_mph</th>
-      <th>cloud_cover</th>
-      <th>N_stations</th>
-      <th>wkday_1</th>
-      <th>wkday_2</th>
-      <th>wkday_3</th>
-      <th>wkday_4</th>
-      <th>wkday_5</th>
-      <th>wkday_6</th>
-      <th>public</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>182</td>
-      <td>16650</td>
-      <td>2013-07-01</td>
-      <td>76</td>
-      <td>0.73</td>
-      <td>26.0</td>
-      <td>8</td>
-      <td>326</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>183</td>
-      <td>22745</td>
-      <td>2013-07-02</td>
-      <td>78</td>
-      <td>0.06</td>
-      <td>23.0</td>
-      <td>7</td>
-      <td>327</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>184</td>
-      <td>21864</td>
-      <td>2013-07-03</td>
-      <td>80</td>
-      <td>0.96</td>
-      <td>23.0</td>
-      <td>7</td>
-      <td>326</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>185</td>
-      <td>22326</td>
-      <td>2013-07-04</td>
-      <td>84</td>
-      <td>0.00</td>
-      <td>24.0</td>
-      <td>4</td>
-      <td>324</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>186</td>
-      <td>21842</td>
-      <td>2013-07-05</td>
-      <td>85</td>
-      <td>0.00</td>
-      <td>23.0</td>
-      <td>1</td>
-      <td>325</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-```python
 df_comb.info()
 ```
 
@@ -448,20 +305,6 @@ RMSE_linreg
 
 ## Scatterplot actual vs predicted values from test set
 
-
-```python
-# plot predictions vs actual values
-preds = reg.predict(X_test) # make predictions
-plt.figure(figsize=(12,8))
-sns.regplot(y_test,preds)
-plt.xlabel('Actual Number of Rides')
-plt.ylabel('Predicted Number of Rides')
-plt.title('Linear Regression')
-plt.grid();
-
-plt.savefig('/Users/Andy/andypicke.github.io/images/Citibike/linreg_vs_actual.png')
-
-```
 
 ![](/images/Citibike/linreg_vs_actual.png)
 
