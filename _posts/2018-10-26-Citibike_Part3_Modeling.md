@@ -4,9 +4,7 @@ title: 'Citibke Part 3 : Modeling'
 tags: python
 ---
 
-# Introduction
-
-This is the third in a series of blog posts i'll be writing on a project to analyze NYC citibike data. The [first post]() focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In the second part, I
+This is the third in a series of blog posts i'll be writing on a project to analyze NYC Citibike data. The [first post](https://andypicke.github.io/Citibike_Part1/) focused on collecting and preparing the data, and a strategy for dealing with a very large data set. In the second part, I
 did some EDA (exploratory data analysis) of the data. In this final post, i'll focus on modeling with the aim of predicting the number of Citibike rides taken on a particular day.
 
 From the EDA, I identified several variables that are correlated with the number of rides and should probably be included in my model:
