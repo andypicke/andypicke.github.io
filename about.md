@@ -15,7 +15,7 @@ I decided to start writing this blog about my adventures in data science for a f
 - B.S in physics
 - PhD in physical oceanography at University of Washington
 - Postdoctoral researcher at Oregon State University
-- Transitioned to a data science career. Currently data analyst at ICF.
+- Transitioned to a data science career. 
 
 ## Long Bio
 
