@@ -16,10 +16,6 @@ Analysis of NCY Citibike usage patterns, and modeling to predict daily demand.
 - <https://andypicke.shinyapps.io/WeatherComparer/>
 - <https://github.com/andypicke/WeatherComparer>
 
-## Weather data
-
-- Downloaded and cleaned historical weather data. Made data available in csv and SQL format.
-- <https://github.com/andypicke/wunderground_data>
 
 ## Bcycle
 
