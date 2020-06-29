@@ -4,8 +4,6 @@ title: Using Cron to Automate Running Python and R Scripts
 tags: Python,R
 ---
 
-# Automating Python and R Scripts with cron
-
 When you're working on data science projects, you might have scripts/processes you want to run each day. For example, i'm working on a [project](https://github.com/andypicke/JeffCo-OpenSpace-LotSpot-Analysis) to model how full trailhead parking lots are based in part on weather. I want to collect the weather forecast each day so I can use it to make predictions. Instead of manually running the script every day (which I would probably forget to do anyways), I set up a cron job that automatically runs the script each day. Cron can also be useful to automate other processes like backups etc..
 
 [Cron](https://en.wikipedia.org/wiki/Cron) is a job scheduler that comes with Linux or Mac OS (Windows has a similar utility called [Task Scheduler](https://www.schakko.de/2020/03/15/how-to-add-a-cron-job-scheduled-task-on-windows/#:~:text=On%20Microsoft%20Windows'%2C%20cron%20jobs,with%20help%20of%20schtasks.exe.&text=On%20modern%20Windows%20systems%20(Windows,is%20available%20in%20version%202.0.))) . In this post, i’ll show a simple example of how I used cron to automate some Python and R scripts.
