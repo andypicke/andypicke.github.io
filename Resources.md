@@ -3,7 +3,7 @@
 
 During my journey into data science, i've searched for and tried many different online resources. The good news is that there are a ton of really great blogs, classes, tutorials, and examples available to learn data science. The bad news is that it can be very overwhelming trying to decide what to learn or focus on. Below are some of the resources i've used a lot and found useful.
 
-## General 
+## General
 
 * [Stackoverflow](https://stackoverflow.com/) - Probably my most-used resource for answers to programming problems. I don't think i've ever actually gone to the website and searched; I usually just google the problem and stackoverflow answers almost always pop up first.
 
@@ -26,6 +26,8 @@ During my journey into data science, i've searched for and tried many different 
 
 ## Data
 
+### General
+
 * [Data is Plural](https://tinyletter.com/data-is-plural) : A weekly newsletter highlighting some really interesting datasets.
 
 * [Google Dataset Search](https://datasetsearch.research.google.com/)
@@ -33,6 +35,12 @@ During my journey into data science, i've searched for and tried many different 
 * [Kaggle Datasets](https://www.kaggle.com/datasets)
 
 * [data.world](https://data.world/)
+
+### Energy-Related
+
+* [Alternative Fuels Data Center](https://afdc.energy.gov/vehicles/electric_emissions.html)
+
+* [EIA OpenData](https://www.eia.gov/opendata/index.php)
 
 ## Blogs
 
